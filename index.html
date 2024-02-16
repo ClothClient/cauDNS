@@ -4,57 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Network Configuration</title>
+    <link rel="stylesheet" href="path/to/your/custom/style.css">
     <script src='jszip.js'></script>
     <script src='filesaver.js'></script>
     <style>
-        /* Your CSS styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #282c34;
+            color: #ffffff;
+            text-align: center;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        /* Container styles */
+        .cont {
+            position: absolute;
+            top: 5px;
+            font-size: 20px;
+            width: 70%;
+            left: 15%;
+        }
+
+        /* Instructions and Credits styles */
+        #started, #finished, #credits {
+            display: block;
+            margin: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Input and Button styles */
+        #input {
+            display: block;
+            width: 50%;
+            margin: 20px auto;
+            font-size: 18px;
+            text-align: left;
+            background: transparent;
+            color: #ffffff;
+            padding: 10px;
+            border: 3px solid #ffffff;
+            border-radius: 25px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background: transparent;
+            color: #ffffff;
+            border: 3px solid #ffffff;
+            border-radius: 25px;
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Advanced Section styles */
+        #advancedbutton {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            display: block;
+            text-align: center;
+            background: #282c34;
+            color: #ffffff;
+            font-size: 15px;
+            cursor: pointer;
+            z-index: 15;
+        }
+
+        #advanced {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: #282c34;
+            top: 100%;
+            left: 0px;
+            z-index: 10;
+        }
+
+        /* Switch styles */
+        .switchtext {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: #ffffff;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: transparent;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: #ffffff;
+            transition: .4s;
+        }
+
+        .slider.round {
+            border-radius: 34px;
+            outline: none;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        /* Small Input styles */
+        .smallinput {
+            width: 25%;
+            font-size: 15px;
+            text-align: left;
+            background: transparent;
+            color: #ffffff;
+            padding: 10px;
+            border: 3px solid #ffffff;
+            border-radius: 25px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <div id="started">
-        <div class="cont">
-            <h2>Instructions (READ CAREFULLY)</h2>
-            <br>
-            <ul>
-                <li>Go to <code>chrome://network#state</code></li>
-                <li>Find the WiFi you are connected to.</li>
-                <li>Press the plus by it and copy everything inside the box that just showed up.</li>
-                <li>Paste it inside the input on this website.</li>
-                <br> I AM NOT RESPONSIBLE FOR ANYTHING THAT HAPPENS.
-            </ul>
-        </div>
-    </div>
-    <input type="text" id="input" placeholder="Read the instructions.">
-    <div style="position:absolute;bottom:5px;z-index:99999;" id="credits">
-        <a href="https://github.com/dragon731012">Coded by Potato.</a>
-        <br>
-        Credits to Caub and OmadaDNS
-    </div>
-    <button id="button" onclick="load();">Download</button>
-    <div id="finished">
-        <div class="cont">
-            <ul>
-                <li>Now, go to <code>chrome://network</code> and scroll down to the import onc file button.</li>
-                <li>Extract the zip and upload the kill.onc file.</li>
-                Whenever you want to re-enable the extensions, use revive.onc. In case of an emergency (network not connecting, DNS blocked, etc.), keep revive.onc and upload it when necessary.
-                <br>If revive doesn't work, use <code>chrome://restart</code> then try.
-            </ul>
-        </div>
-    </div>
-    <div id="advancedbutton" onclick="adv();">Advanced +</div>
-    <div id="advanced" data-pos="down" style="border-top:3px solid white;animation-fill-mode: both;display:block;text-align:center;flex-direction: column;align-items:center;">
-        <div class="switchtext">
-            <b style="display:flex;font-size:20px;padding-right:10px;">caub - </b>
-            <label class="switch" style="display:flex;">
-                <input type="checkbox" id="caub" checked>
-                <span class="slider round"></span>
-            </label>
-        </div>
-        <div class="switchtext" style="flex-direction: column;">
-            <!-- Your input fields here -->
-        </div>
-    </div>
-    <!-- Your commented-out code for proxy settings -->
+    <!-- Your HTML content here -->
     <script>
         // Your JavaScript code here
     </script>
